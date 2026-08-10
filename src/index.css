@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #176B4D;       /* Deep Natural Green */
+  --color-brand-darkgreen: #0F513A;   /* Dark Hover Green */
+  --color-brand-sage: #E8F2ED;        /* Soft Sage Green */
+  --color-brand-charcoal: #171717;    /* Primary Dark Charcoal Text */
+  --color-brand-muted: #5F6368;       /* Secondary Text */
+  --color-brand-bg: #FAFAF7;          /* Primary Background: Warm Off White */
+  --color-brand-white: #FFFFFF;       /* Secondary Background: Pure White */
+  --color-brand-border: #E5E5E5;      /* Light Subtle Border */
+
+  --font-sans: "Plus Jakarta Sans", "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --shadow-sleek: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-charcoal);
+    font-size: 14px;
+  }
+
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-charcoal);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAFAF7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #176B4D;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0F513A;
+  }
+}
+
+/* Glass & Clean Header Bar */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.glass-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Premium Bright Card Utility */
+.sleek-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #E5E5E5;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sleek-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-color: #176B4D;
+}
+
+/* Primary Button: #176B4D Deep Natural Green, #FFFFFF text, Hover #0F513A */
+.sleek-btn-primary {
+  background: #176B4D;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sleek-btn-primary:hover {
+  background: #0F513A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(23, 107, 77, 0.25);
+}
+
+/* Secondary Button: White/transparent background, Dark charcoal border #171717, Dark charcoal text #171717 */
+.sleek-btn-secondary {
+  background: #FFFFFF;
+  color: #171717;
+  border: 1.5px solid #171717;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sleek-btn-secondary:hover {
+  background: #E8F2ED;
+  border-color: #176B4D;
+  color: #176B4D;
+}
+
+/* Soft Sage Button Variant */
+.sleek-btn-sage {
+  background: #E8F2ED;
+  color: #176B4D;
+  border: 1px solid rgba(23, 107, 77, 0.2);
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sleek-btn-sage:hover {
+  background: #176B4D;
+  color: #ffffff;
+}
+
+/* Smooth custom pulse animation */
+@keyframes slow-pulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.04); }
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 8s infinite ease-in-out;
+}

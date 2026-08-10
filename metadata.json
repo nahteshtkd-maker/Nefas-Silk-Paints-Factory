@@ -1,0 +1,8 @@
+{
+  "name": "Nefas Silk Paints Factory",
+  "description": "A premium, modern corporate website for Nefas Silk Paints Factory PLC, Ethiopia's leading industrial group spanning paint manufacturing, coffee exports, fleet logistics, and agro-product exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
